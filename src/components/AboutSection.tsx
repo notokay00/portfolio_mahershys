@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { User, BookOpen, ChefHat } from "lucide-react";
+import { User, BookOpen, ChefHat, Rocket } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -12,7 +12,7 @@ const AboutSection = () => {
           className="text-center mb-16"
         >
           <p className="text-sm font-mono text-primary tracking-widest uppercase mb-2">Who I Am</p>
-          <h2 className="text-3xl md:text-4xl font-bold">About Me</h2>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold">About Me</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 max-w-4xl mx-auto items-start">
@@ -37,17 +37,18 @@ const AboutSection = () => {
             className="md:col-span-3 space-y-5"
           >
             <p className="text-muted-foreground leading-relaxed">
-              I'm a 4th-semester Electrical Engineering undergraduate with a deep passion for{" "}
-              <span className="text-foreground font-medium">digital logic</span>,{" "}
-              <span className="text-foreground font-medium">control systems</span>, and bridging the
-              gap between hardware and software. I believe the most exciting innovations happen at
-              the intersection of disciplines — where circuits meet code, and power systems meet
-              machine learning.
+              I'm Maharshi Dave — an aspiring aerospace and electrical engineer with a deep
+              fascination for{" "}
+              <span className="text-foreground font-medium">ion thrusters</span>,{" "}
+              <span className="text-foreground font-medium">Hall effect thrusters</span>, and{" "}
+              <span className="text-foreground font-medium">electromagnetic propulsion</span>.
+              I'm actively building a foundation in electronics, control systems, and plasma
+              propulsion to contribute to the future of sustainable deep-space exploration.
             </p>
 
             <div className="pt-4 border-t border-border">
               <h3 className="text-sm font-mono text-primary uppercase tracking-wider mb-3 flex items-center gap-2">
-                <BookOpen size={14} />
+                <Rocket size={14} />
                 Beyond Engineering
               </h3>
               <div className="space-y-2 text-sm text-muted-foreground">
@@ -58,7 +59,12 @@ const AboutSection = () => {
                 </p>
                 <p className="flex items-start gap-2">
                   <ChefHat size={14} className="mt-1 shrink-0 text-primary/60" />
-                  On an eternal quest to cook the perfect mushroom pasta.
+                  On an eternal quest to perfect the ultimate mushroom pasta recipe.
+                </p>
+                <p className="flex items-start gap-2">
+                  <User size={14} className="mt-1 shrink-0 text-primary/60" />
+                  Proudly serving as the{" "}
+                  <span className="text-foreground">"Chief Scamming Officer"</span> at Laxmi Chit Fund.
                 </p>
               </div>
             </div>

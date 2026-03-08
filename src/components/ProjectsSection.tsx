@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Atom, Plane, Activity, Globe, Zap } from "lucide-react";
+import { Atom, Globe, Plane, Activity, Zap, ExternalLink } from "lucide-react";
 
 const projects = [
   {
@@ -7,7 +7,15 @@ const projects = [
     title: "C14 Betavoltaic Battery Research",
     tags: ["Geant4", "CASINO", "Quantum Tunneling"],
     description:
-      "Conducted advanced simulations and research on C14 betavoltaic cells, presenting findings at the Indo Quantum Summit at PDEU.",
+      "Conducted advanced simulations on C14 betavoltaic cells, presenting findings at the Indo Quantum Summit at PDEU.",
+  },
+  {
+    icon: Globe,
+    title: "PDEU-Huddle Web App",
+    tags: ["Next.js", "Prisma", "Supabase", "Live URL"],
+    description:
+      "Full-stack web application featuring a robust database and real-time notification modals.",
+    link: "https://pdeuhuddle.laxmichitfund.com/",
   },
   {
     icon: Plane,
@@ -22,13 +30,6 @@ const projects = [
     tags: ["MATLAB", "Simulink", "Machine Learning"],
     description:
       "Developed a simulation model and generated datasets for 15 fault types to train a classification model.",
-  },
-  {
-    icon: Globe,
-    title: "PDEU-Huddle Web App",
-    tags: ["Next.js", "Prisma", "Supabase"],
-    description:
-      "Full-stack web application featuring a robust database and real-time notification modals.",
   },
   {
     icon: Zap,
@@ -59,7 +60,7 @@ const ProjectsSection = () => {
           className="text-center mb-16"
         >
           <p className="text-sm font-mono text-primary tracking-widest uppercase mb-2">Portfolio</p>
-          <h2 className="text-3xl md:text-4xl font-bold">Featured Projects</h2>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold">Featured Projects</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -76,8 +77,20 @@ const ProjectsSection = () => {
             >
               <div className="absolute inset-0 rounded-xl bg-primary/[0.03] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
-                  <project.icon size={20} />
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                    <project.icon size={20} />
+                  </div>
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <ExternalLink size={16} />
+                    </a>
+                  )}
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">

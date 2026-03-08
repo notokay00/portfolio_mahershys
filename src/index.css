@@ -2,52 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 220 20% 7%;
+    --background: 225 25% 6%;
     --foreground: 210 20% 92%;
 
-    --card: 220 18% 10%;
+    --card: 225 22% 9%;
     --card-foreground: 210 20% 92%;
 
-    --popover: 220 18% 10%;
+    --popover: 225 22% 9%;
     --popover-foreground: 210 20% 92%;
 
-    --primary: 210 100% 56%;
-    --primary-foreground: 220 20% 7%;
+    --primary: 215 90% 58%;
+    --primary-foreground: 225 25% 6%;
 
-    --secondary: 220 16% 14%;
+    --secondary: 225 18% 13%;
     --secondary-foreground: 210 20% 85%;
 
-    --muted: 220 14% 16%;
-    --muted-foreground: 215 15% 55%;
+    --muted: 225 16% 15%;
+    --muted-foreground: 220 15% 52%;
 
-    --accent: 210 100% 56%;
-    --accent-foreground: 220 20% 7%;
+    --accent: 215 90% 58%;
+    --accent-foreground: 225 25% 6%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 14% 18%;
-    --input: 220 14% 18%;
-    --ring: 210 100% 56%;
+    --border: 225 16% 16%;
+    --input: 225 16% 16%;
+    --ring: 215 90% 58%;
 
     --radius: 0.75rem;
 
-    --glow: 210 100% 56%;
-    --surface: 220 16% 12%;
-    --surface-hover: 220 16% 16%;
+    --glow: 215 90% 58%;
+    --surface: 225 18% 11%;
+    --surface-hover: 225 18% 15%;
 
-    --sidebar-background: 220 20% 7%;
+    --sidebar-background: 225 25% 6%;
     --sidebar-foreground: 210 20% 92%;
-    --sidebar-primary: 210 100% 56%;
-    --sidebar-primary-foreground: 220 20% 7%;
-    --sidebar-accent: 220 16% 14%;
+    --sidebar-primary: 215 90% 58%;
+    --sidebar-primary-foreground: 225 25% 6%;
+    --sidebar-accent: 225 18% 13%;
     --sidebar-accent-foreground: 210 20% 92%;
-    --sidebar-border: 220 14% 18%;
-    --sidebar-ring: 210 100% 56%;
+    --sidebar-border: 225 16% 16%;
+    --sidebar-ring: 215 90% 58%;
   }
 }
 
@@ -61,13 +61,13 @@
   }
 
   ::selection {
-    background: hsl(210 100% 56% / 0.3);
+    background: hsl(215 90% 58% / 0.3);
   }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-[hsl(180,80%,55%)];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-[hsl(195,75%,55%)];
   }
 
   .glow-sm {
@@ -79,7 +79,11 @@
   }
 
   .dot-grid {
-    background-image: radial-gradient(circle, hsl(var(--primary) / 0.12) 1px, transparent 1px);
-    background-size: 32px 32px;
+    background-image: radial-gradient(circle, hsl(var(--primary) / 0.1) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .font-heading {
+    font-family: 'Libre Caslon Text', 'Georgia', serif;
   }
 }
