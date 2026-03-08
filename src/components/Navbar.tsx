@@ -29,8 +29,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-16 px-6">
-        <a href="#home" className="text-xl font-bold font-mono text-gradient">
-          &lt;YourName /&gt;
+        <a href="#home" className="text-xl font-heading font-bold text-gradient">
+          Maharshi Dave
         </a>
 
         {/* Desktop */}
