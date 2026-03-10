@@ -21,6 +21,7 @@ const Navbar = () => {
           M. Dave // Aerospace & Electrical
         </a>
 
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
@@ -32,13 +33,16 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="#"
+            href="/Maharshi_Dave_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-xs font-mono uppercase tracking-[0.15em] text-primary hover:underline underline-offset-4 transition-all duration-200"
           >
             [RESUME ↓]
           </a>
         </div>
 
+        {/* Mobile Menu Toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden text-foreground"
@@ -47,6 +51,7 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Mobile Menu Dropdown */}
       {mobileOpen && (
         <div className="md:hidden bg-background border-b border-foreground px-6 pb-6 pt-2 space-y-3">
           {navLinks.map((link) => (
@@ -60,7 +65,9 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="#"
+            href="/Maharshi_Dave_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="block text-xs font-mono uppercase tracking-[0.15em] text-primary"
           >
             [RESUME ↓]

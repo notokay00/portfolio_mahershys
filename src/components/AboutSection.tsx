@@ -62,7 +62,7 @@ export default function AboutSection() {
               <img
                 src="/profile.jpg"
                 alt="Maharshi Dave"
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                className="w-full h-full object-cover transition-all duration-500"
               />
               {/* Technical Caption Box */}
               <div className="absolute bottom-2 right-2 bg-background px-2 py-1 text-[10px] font-mono border border-foreground uppercase text-foreground shadow-sm">
