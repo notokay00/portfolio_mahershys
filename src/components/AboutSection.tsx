@@ -1,9 +1,9 @@
-import React from "react";
 export default function AboutSection() {
   return (
     <section id="about">
       <div className="max-w-7xl mx-auto px-6 py-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+          
           {/* Left — Bio */}
           <div className="md:col-span-7 order-2 md:order-1">
             <p className="text-xs font-mono uppercase tracking-[0.2em] text-muted-foreground mb-2">
@@ -15,17 +15,14 @@ export default function AboutSection() {
 
             <div className="text-sm text-muted-foreground leading-relaxed mb-6 space-y-4">
               <p>
-                I&apos;m Maharshi Dave &mdash; an aspiring aerospace and
-                electrical engineer building a foundation in{" "}
+                I&apos;m Maharshi Dave &mdash; an aspiring aerospace and electrical engineer building a
+                foundation in{" "}
                 <span className="text-foreground">nuclear engineering</span>,{" "}
                 <span className="text-foreground">plasma propulsion</span>, and{" "}
-                <span className="text-foreground">control systems</span>.
+                <span className="text-foreground">control systems</span>. 
               </p>
               <p>
-                My research spans from C14 betavoltaic quantum tunneling
-                simulations to exploring nuclear thermal and electromagnetic
-                propulsion &mdash; technologies critical for sustainable
-                deep-space exploration.
+                My research spans from C14 betavoltaic quantum tunneling simulations to exploring nuclear thermal and electromagnetic propulsion &mdash; technologies critical for sustainable deep-space exploration.
               </p>
             </div>
 
@@ -35,22 +32,15 @@ export default function AboutSection() {
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  &rarr; Organizing events for the{" "}
-                  <span className="text-foreground">
-                    Jharokha literature club
-                  </span>
-                  .
+                  &rarr; Writing <span className="text-foreground">poetry</span> to balance out the complex engineering equations.
                 </li>
                 <li>
-                  &rarr; On an eternal quest to perfect the ultimate mushroom
-                  pasta recipe.
+                  &rarr; Passionate about <span className="text-foreground">cooking</span> and experimenting with diverse culinary techniques.
                 </li>
                 <li>
                   &rarr; Proudly serving as{" "}
-                  <span className="text-foreground">
-                    &quot;Chief Scamming Officer&quot;
-                  </span>{" "}
-                  at Laxmi Chit Fund.
+                  <span className="text-foreground">&quot;Chief Scamming Officer&quot;</span> at
+                  Laxmi Chit Fund.
                 </li>
               </ul>
             </div>
@@ -70,6 +60,7 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
+
         </div>
       </div>
 
