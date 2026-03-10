@@ -1,3 +1,4 @@
+import React from "react";
 const HeroSection = () => {
   return (
     <section id="home" className="pt-14">
@@ -8,8 +9,9 @@ const HeroSection = () => {
           </h1>
 
           <p className="mt-8 text-sm md:text-base font-mono text-muted-foreground max-w-2xl leading-relaxed">
-            Bridging electrical systems with sustainable propulsion for deep-space
-            exploration. Focus: Ion thrusters, Hall effect, C14 Betavoltaics.
+            Bridging electrical systems with sustainable propulsion for
+            deep-space exploration. Focus: Ion thrusters, Hall effect, nuclear
+            thermal propulsion, and C14 Betavoltaics.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-6 text-xs font-mono uppercase tracking-[0.15em]">
@@ -20,7 +22,9 @@ const HeroSection = () => {
               View Research →
             </a>
             <a
-              href="#"
+              href="/Maharshi_Dave_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
             >
               Download Resume ↓

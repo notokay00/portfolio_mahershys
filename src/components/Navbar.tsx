@@ -14,7 +14,10 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-foreground">
       <div className="max-w-7xl mx-auto flex items-center justify-between h-14 px-6">
-        <a href="#home" className="text-xs font-mono uppercase tracking-[0.2em] text-foreground">
+        <a
+          href="#home"
+          className="text-xs font-mono uppercase tracking-[0.2em] text-foreground"
+        >
           M. Dave // Aerospace & Electrical
         </a>
 

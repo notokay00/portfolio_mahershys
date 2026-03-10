@@ -3,32 +3,37 @@ const projects = [
     id: "01",
     title: "C14 Betavoltaic Research",
     tags: "Geant4, CASINO, Quantum Tunneling",
-    description: "Advanced simulations on C14 betavoltaic cells. Presented findings at the Indo Quantum Summit at PDEU.",
+    description:
+      "Advanced simulations on C14 betavoltaic cells. Presented findings at the Indo Quantum Summit at PDEU.",
   },
   {
     id: "02",
     title: "PDEU-Huddle",
     tags: "Next.js, Prisma, Supabase",
-    description: "Full-stack web application with robust database and real-time notification modals.",
+    description:
+      "Full-stack web application with robust database and real-time notification modals.",
     link: "https://pdeuhuddle.laxmichitfund.com/",
   },
   {
     id: "03",
     title: "ISRO IRoC-U UAV",
     tags: "System Architecture, Comms, Emergency Response",
-    description: "System architecture, communication protocols, and emergency response for autonomous drone competition.",
+    description:
+      "System architecture, communication protocols, and emergency response for autonomous drone competition.",
   },
   {
     id: "04",
     title: "Power Fault Detection",
     tags: "MATLAB, Simulink, Machine Learning",
-    description: "Simulation model and datasets for 15 fault types to train a classification model.",
+    description:
+      "Simulation model and datasets for 15 fault types to train a classification model.",
   },
   {
     id: "05",
     title: "APFC System",
     tags: "Power Systems, Hardware",
-    description: "Automatic Power Factor Corrector for solar integration and motor loads. 2KVAr capacitor configuration.",
+    description:
+      "Automatic Power Factor Corrector for solar integration and motor loads. 2KVAr capacitor configuration.",
   },
 ];
 
