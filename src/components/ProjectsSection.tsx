@@ -1,116 +1,93 @@
-import { motion } from "framer-motion";
-import { Atom, Globe, Plane, Activity, Zap, ExternalLink } from "lucide-react";
-
 const projects = [
   {
-    icon: Atom,
-    title: "C14 Betavoltaic Battery Research",
-    tags: ["Geant4", "CASINO", "Quantum Tunneling"],
-    description:
-      "Conducted advanced simulations on C14 betavoltaic cells, presenting findings at the Indo Quantum Summit at PDEU.",
+    id: "01",
+    title: "C14 Betavoltaic Research",
+    tags: "Geant4, CASINO, Quantum Tunneling",
+    description: "Advanced simulations on C14 betavoltaic cells. Presented findings at the Indo Quantum Summit at PDEU.",
   },
   {
-    icon: Globe,
-    title: "PDEU-Huddle Web App",
-    tags: ["Next.js", "Prisma", "Supabase", "Live URL"],
-    description:
-      "Full-stack web application featuring a robust database and real-time notification modals.",
+    id: "02",
+    title: "PDEU-Huddle",
+    tags: "Next.js, Prisma, Supabase",
+    description: "Full-stack web application with robust database and real-time notification modals.",
     link: "https://pdeuhuddle.laxmichitfund.com/",
   },
   {
-    icon: Plane,
-    title: "ISRO IRoC-U Autonomous UAV",
-    tags: ["System Architecture", "Electronics", "Comms"],
-    description:
-      "Designed the system architecture, communication protocols, and emergency response mechanisms for an autonomous drone competition.",
+    id: "03",
+    title: "ISRO IRoC-U UAV",
+    tags: "System Architecture, Comms, Emergency Response",
+    description: "System architecture, communication protocols, and emergency response for autonomous drone competition.",
   },
   {
-    icon: Activity,
-    title: "Power Distribution Fault Detection",
-    tags: ["MATLAB", "Simulink", "Machine Learning"],
-    description:
-      "Developed a simulation model and generated datasets for 15 fault types to train a classification model.",
+    id: "04",
+    title: "Power Fault Detection",
+    tags: "MATLAB, Simulink, Machine Learning",
+    description: "Simulation model and datasets for 15 fault types to train a classification model.",
   },
   {
-    icon: Zap,
-    title: "APFC System Design",
-    tags: ["Power Systems", "Hardware"],
-    description:
-      "Designed an Automatic Power Factor Corrector for solar integration and motor loads, featuring a 2KVAr capacitor configuration.",
+    id: "05",
+    title: "APFC System",
+    tags: "Power Systems, Hardware",
+    description: "Automatic Power Factor Corrector for solar integration and motor loads. 2KVAr capacitor configuration.",
   },
 ];
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.1, duration: 0.5 },
-  }),
-};
-
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24">
-      <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <p className="text-sm font-mono text-primary tracking-widest uppercase mb-2">Portfolio</p>
-          <h2 className="font-heading text-3xl md:text-4xl font-bold">Featured Projects</h2>
-        </motion.div>
+    <section id="projects">
+      <div className="max-w-7xl mx-auto px-6 py-20">
+        <div className="mb-12">
+          <p className="text-xs font-mono uppercase tracking-[0.2em] text-muted-foreground mb-2">
+            Project Index
+          </p>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
+            Selected Work
+          </h2>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, i) => (
-            <motion.div
-              key={project.title}
-              custom={i}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={cardVariants}
-              whileHover={{ y: -6, transition: { duration: 0.2 } }}
-              className="group relative rounded-xl border border-border bg-card p-6 hover:border-primary/40 transition-colors duration-300"
+        <div className="border-t border-foreground">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="border-b border-foreground grid grid-cols-12 gap-4 py-6 group hover:bg-secondary/50 transition-colors duration-200 px-2"
             >
-              <div className="absolute inset-0 rounded-xl bg-primary/[0.03] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="relative">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                    <project.icon size={20} />
-                  </div>
-                  {project.link && (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <ExternalLink size={16} />
-                    </a>
-                  )}
-                </div>
-                <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+              <div className="col-span-1 text-xs font-mono text-muted-foreground pt-1">
+                {project.id}
+              </div>
+
+              <div className="col-span-11 md:col-span-3">
+                <h3 className="font-heading text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-200">
+                  {project.title}
+                </h3>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-mono text-primary hover:underline underline-offset-2 mt-1 inline-block"
+                  >
+                    [LIVE ↗]
+                  </a>
+                )}
+              </div>
+
+              <div className="col-span-11 md:col-span-3 md:col-start-5">
+                <p className="text-xs font-mono text-muted-foreground leading-relaxed">
+                  {project.tags}
+                </p>
+              </div>
+
+              <div className="col-span-11 md:col-span-5 md:col-start-8">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs font-mono px-2.5 py-1 rounded-md bg-secondary text-secondary-foreground"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
+
+      <hr className="border-foreground" />
     </section>
   );
 };
