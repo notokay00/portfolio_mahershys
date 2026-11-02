@@ -4,36 +4,67 @@ const projects = [
     title: "C14 Betavoltaic Research",
     tags: "Geant4, CASINO, Quantum Tunneling",
     description:
-      "Advanced simulations on C14 betavoltaic cells. Presented findings at the Indo Quantum Summit at PDEU.",
+      "Advanced Monte Carlo simulations on Carbon-14 betavoltaic micro-batteries. Presented findings at the Indo Quantum Summit at PDEU.",
   },
   {
     id: "02",
-    title: "PDEU-Huddle",
-    tags: "Next.js, Prisma, Supabase",
+    title: "High-Gain Boost Converter (TEG Harvester)",
+    tags: "BQ25504, Supercapacitors, ESP32, KiCad",
     description:
-      "Full-stack web application with robust database and real-time notification modals.",
-    link: "https://pdeuhuddle.laxmichitfund.com/",
+      "Ultra-low-power sub-volt energy harvesting boost converter circuit for thermoelectric generators with cold-start and MPPT.",
+    link: "https://github.com/notokay00/BQ25504-Energy-Harvester",
+    linkLabel: "[GITHUB ↗]",
   },
   {
     id: "03",
-    title: "ISRO IRoC-U UAV",
-    tags: "System Architecture, Comms, Emergency Response",
+    title: "3U CubeSat EPS & Flatsat",
+    tags: "STM32G474RE, TLP3543A, INA219/INA226, KiCad",
     description:
-      "System architecture, communication protocols, and emergency response for autonomous drone competition.",
+      "2-layer power distribution and solid-state photorelay switching PCB with real-time I2C current telemetry for a 3U student satellite.",
   },
   {
     id: "04",
-    title: "Power Fault Detection",
-    tags: "MATLAB, Simulink, Machine Learning",
+    title: "ISRO IRoC-U UAV",
+    tags: "Pixhawk, ArduPilot, Comms, Fail-Safe Systems",
     description:
-      "Simulation model and datasets for 15 fault types to train a classification model.",
+      "System architecture, power electronics, communication protocols, and emergency response for an autonomous quadcopter.",
   },
   {
     id: "05",
-    title: "APFC System",
-    tags: "Power Systems, Hardware",
+    title: "AquaMind Smart Water Grid",
+    tags: "ESP32, JSN-SR04T, Next.js, Supabase, Tailwind",
     description:
-      "Automatic Power Factor Corrector for solar integration and motor loads. 2KVAr capacitor configuration.",
+      "Full-stack smart water tank IoT telemetry dashboard paired with ultrasonic liquid-level sensing hardware nodes.",
+  },
+  {
+    id: "06",
+    title: "PDEU-Huddle",
+    tags: "Next.js, Prisma, Supabase",
+    description:
+      "Full-stack campus web application with relational database architecture and real-time notification modals.",
+    link: "https://pdeuhuddle.laxmichitfund.com/",
+    linkLabel: "[LIVE ↗]",
+  },
+  {
+    id: "07",
+    title: "Power Fault Detection",
+    tags: "MATLAB, Simulink, Machine Learning",
+    description:
+      "Power distribution grid simulation model generating synthetic datasets across 15 fault types to train ML classification models.",
+  },
+  {
+    id: "08",
+    title: "APFC System",
+    tags: "Power Electronics, Capacitor Banks, Hardware",
+    description:
+      "Solar-integrated Automatic Power Factor Corrector utilizing a 2kVAr capacitor bank configuration to mitigate motor startup voltage sags.",
+  },
+  {
+    id: "09",
+    title: "Zephyr Decentralized Platform",
+    tags: "Solidity, Sepolia Testnet, Next.js, Web3",
+    description:
+      "Decentralized innovation platform and smart contract dApp deployed on the Ethereum Sepolia testnet.",
   },
 ];
 
@@ -71,7 +102,7 @@ const ProjectsSection = () => {
                     rel="noopener noreferrer"
                     className="text-xs font-mono text-primary hover:underline underline-offset-2 mt-1 inline-block"
                   >
-                    [LIVE ↗]
+                    {project.linkLabel || "[LIVE ↗]"}
                   </a>
                 )}
               </div>

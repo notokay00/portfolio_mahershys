@@ -1,8 +1,7 @@
 const entries = [
-  { role: "Event Management Head", org: "IEEE IAS PDEU Student Branch" },
-  { role: "Electrical Lead", org: "IEEE Student Branch PDEU" },
-  { role: "Content & Documentation Head", org: "DebSoc PDEU" },
-  { role: "Certified", org: "Fundamentals of Deep Learning" },
+  { role: "Chairperson", org: "IEEE IAS PDEU Student Branch" },
+  { role: "Technical Head", org: "IEEE Student Branch PDEU" },
+  { role: "Certified", org: "Fundamentals of Deep Learning (NVIDIA)" },
 ];
 
 const ExperienceSection = () => {
@@ -16,7 +15,7 @@ const ExperienceSection = () => {
               Systems Log
             </p>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
-              Leadership & Certifications
+              Leadership &amp; Certifications
             </h2>
           </div>
 

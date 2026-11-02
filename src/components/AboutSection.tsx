@@ -7,7 +7,7 @@ export default function AboutSection() {
           {/* Left — Bio */}
           <div className="md:col-span-7 order-2 md:order-1">
             <p className="text-xs font-mono uppercase tracking-[0.2em] text-muted-foreground mb-2">
-              Operator Bio
+              Engineer Profile
             </p>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
               About
@@ -15,32 +15,28 @@ export default function AboutSection() {
 
             <div className="text-sm text-muted-foreground leading-relaxed mb-6 space-y-4">
               <p>
-                I&apos;m Maharshi Dave &mdash; an aspiring aerospace and electrical engineer building a
+                I&apos;m Maharshi Dave &mdash; an electrical and aerospace engineering researcher building a
                 foundation in{" "}
-                <span className="text-foreground">nuclear engineering</span>,{" "}
-                <span className="text-foreground">plasma propulsion</span>, and{" "}
-                <span className="text-foreground">control systems</span>. 
+                <span className="text-foreground">power electronics</span>,{" "}
+                <span className="text-foreground">plasma propulsion</span>,{" "}
+                <span className="text-foreground">nuclear engineering</span>, and{" "}
+                <span className="text-foreground">autonomous control systems</span>.
               </p>
               <p>
-                My research spans from C14 betavoltaic quantum tunneling simulations to exploring nuclear thermal and electromagnetic propulsion &mdash; technologies critical for sustainable deep-space exploration.
+                My work spans from designing sub-volt energy harvesting circuits and 3U CubeSat electrical power subsystems to C14 betavoltaic quantum tunneling simulations and electromagnetic propulsion &mdash; technologies critical for resilient deep-space exploration.
               </p>
             </div>
 
             <div className="border-t border-foreground pt-5 mt-8">
               <p className="text-xs font-mono uppercase tracking-[0.2em] text-muted-foreground mb-3">
-                Anomalies:
+                Beyond the Lab:
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  &rarr; Writing <span className="text-foreground">poetry</span> to balance out the complex engineering equations.
+                  &rarr; Writing <span className="text-foreground">Hindi &amp; Urdu poetry</span> and playing the 10-hole diatonic harmonica and guitar.
                 </li>
                 <li>
-                  &rarr; Passionate about <span className="text-foreground">cooking</span> and experimenting with diverse culinary techniques.
-                </li>
-                <li>
-                  &rarr; Proudly serving as{" "}
-                  <span className="text-foreground">&quot;Chief Scamming Officer&quot;</span> at
-                  Laxmi Chit Fund.
+                  &rarr; Long-distance <span className="text-foreground">road cycling</span> and building custom 3D-printed audio and microcontroller hardware.
                 </li>
               </ul>
             </div>
@@ -56,7 +52,7 @@ export default function AboutSection() {
               />
               {/* Technical Caption Box */}
               <div className="absolute bottom-2 right-2 bg-background px-2 py-1 text-[10px] font-mono border border-foreground uppercase text-foreground shadow-sm">
-                Fig 1. Operator
+                B.Tech EE // PDEU
               </div>
             </div>
           </div>
