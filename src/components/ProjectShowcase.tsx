@@ -333,6 +333,54 @@ export default function ProjectShowcase() {
             <div className="aspect-square bg-secondary border border-foreground/20 flex items-center justify-center text-xs text-muted-foreground font-mono">[UI: AQUAMIND TELEMETRY]</div>
           </div>
         </div>
+
+        {/* Project 6: Solar Cold Storage */}
+        <div className="grid md:grid-cols-2 gap-12 items-start pt-16 border-t border-foreground/10">
+          <div className="grid grid-cols-2 gap-4 md:order-1 order-2">
+            <div className="aspect-square bg-secondary border border-foreground/20 flex items-center justify-center text-xs text-muted-foreground font-mono">[IMAGE: ICE BANK ARCH]</div>
+            <div className="aspect-square bg-secondary border border-foreground/20 flex items-center justify-center text-xs text-muted-foreground font-mono">[IMAGE: ESP32 PCB]</div>
+          </div>
+
+          <div className="space-y-6 md:order-2 order-1">
+            <h3 className="text-2xl font-bold font-heading">Hydronic Solar-Powered Smart Cold Storage</h3>
+            
+            <div className="space-y-4 text-sm text-muted-foreground">
+              <div>
+                <strong className="text-foreground block mb-1">Problem</strong>
+                <p>Off-grid agricultural refrigeration typically relies on massive, expensive electrochemical battery banks that degrade quickly and scale poorly.</p>
+              </div>
+              
+              <div>
+                <strong className="text-foreground block mb-1">Solution</strong>
+                <p>Designed a dual-domain energy architecture utilizing a 300W solar PV array to freeze a 60L water tank, storing 2.51 kWh of cooling as latent heat. A small 12.8V LiFePO4 battery solely powers an ESP32 and hydronic glycol circulation.</p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4 pt-4 border-t border-foreground/10">
+                <div>
+                  <strong className="text-foreground block mb-1">Hardware</strong>
+                  <ul className="list-disc pl-4 space-y-1">
+                    <li>ESP32 &amp; LiFePO4 BMS</li>
+                    <li>Secop BD35F BLDC</li>
+                    <li>DHT22 &amp; DS18B20</li>
+                  </ul>
+                </div>
+                <div>
+                  <strong className="text-foreground block mb-1">Software</strong>
+                  <ul className="list-disc pl-4 space-y-1">
+                    <li>C/C++ Finite State Machine</li>
+                    <li>Sensor Telemetry</li>
+                    <li>Hysteresis Pump Control</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="pt-4 border-t border-foreground/10">
+                <strong className="text-foreground block mb-1">Outcome</strong>
+                <p>Separated high-power refrigeration physics from low-power supervisory control, achieving a calculated 72-hour passive thermal autonomy target.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* 3 & 4. LEARNING AND TOOLS MATRIX */}
