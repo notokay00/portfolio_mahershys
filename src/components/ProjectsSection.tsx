@@ -71,7 +71,7 @@ const projects = [
     title: "Hydronic Solar Smart Cold Storage",
     tags: "ESP32, Thermal Storage, BLDC Control, C/C++",
     description:
-      "Designed the electrical architecture and ESP32 supervisory control logic for an off-grid solar cold storage unit. Replaced massive chemical batteries with a 60L latent-heat ice bank and a low-power hydronic glycol transport loop[cite: 5].",
+      "Designed the electrical architecture and ESP32 supervisory control logic for an off-grid solar cold storage unit. Replaced massive chemical batteries with a 60L latent-heat ice bank and a low-power hydronic glycol transport loop.",
   },
 ];
 

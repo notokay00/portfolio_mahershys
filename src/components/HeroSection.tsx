@@ -1,10 +1,12 @@
 import React from "react";
+
 const HeroSection = () => {
   return (
     <section id="home" className="pt-14">
       <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
         <div className="max-w-4xl">
-          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.05] tracking-tight text-foreground">
+          {/* Explicitly set to text-black to keep it dark as requested */}
+          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.05] tracking-tight text-black dark:text-white">
             Advancing Propulsion & Autonomous Systems.
           </h1>
 
@@ -33,7 +35,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <hr className="border-foreground" />
+      <hr className="border-foreground/20" />
     </section>
   );
 };
