@@ -196,7 +196,17 @@ export default function ProjectShowcase() {
         {/* Project 3: UAV */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start pt-16 border-t border-foreground/10">
           <div className="space-y-8">
-            <h3 className="text-2xl md:text-3xl font-bold font-heading text-[#1E90FF]">ISRO IRoC-U Autonomous UAV</h3>
+            <div className="flex items-center justify-between gap-4 flex-wrap">
+              <h3 className="text-2xl md:text-3xl font-bold font-heading text-[#1E90FF]">ISRO IRoC-U Autonomous UAV</h3>
+              <a
+                href="https://github.com/notokay00/openvins_implementation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-mono uppercase px-2.5 py-1 border border-foreground hover:bg-foreground hover:text-background transition-colors"
+              >
+                [GITHUB ↗]
+              </a>
+            </div>
             
             <div className="space-y-6 text-sm md:text-base text-muted-foreground leading-relaxed">
               <div>
@@ -291,7 +301,17 @@ export default function ProjectShowcase() {
         {/* Project 5: AquaMind */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start pt-16 border-t border-foreground/10">
           <div className="space-y-8">
-            <h3 className="text-2xl md:text-3xl font-bold font-heading text-[#1E90FF]">AquaMind // Smart Water Grid IoT</h3>
+            <div className="flex items-center justify-between gap-4 flex-wrap">
+              <h3 className="text-2xl md:text-3xl font-bold font-heading text-[#1E90FF]">AquaMind // Smart Water Grid IoT</h3>
+              <a
+                href="https://github.com/notokay00/aqua-mind-dashboard"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-mono uppercase px-2.5 py-1 border border-foreground hover:bg-foreground hover:text-background transition-colors"
+              >
+                [GITHUB ↗]
+              </a>
+            </div>
             
             <div className="space-y-6 text-sm md:text-base text-muted-foreground leading-relaxed">
               <div>
@@ -334,7 +354,65 @@ export default function ProjectShowcase() {
           </div>
         </div>
 
-        {/* Project 6: Solar Cold Storage */}
+        {/* Project 6: Zephyr DAO */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start pt-16 border-t border-foreground/10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:order-1 order-2 mt-8 md:mt-0">
+            <div className="aspect-video sm:aspect-square bg-secondary border border-foreground/20 flex items-center justify-center text-xs text-muted-foreground font-mono text-center px-2">[UI: ZEPHYR DASHBOARD]</div>
+            <div className="aspect-video sm:aspect-square bg-secondary border border-foreground/20 flex items-center justify-center text-xs text-muted-foreground font-mono text-center px-2">[SMART CONTRACT LOGIC]</div>
+          </div>
+
+          <div className="space-y-8 md:order-2 order-1">
+            <div className="flex items-center justify-between gap-4 flex-wrap">
+              <h3 className="text-2xl md:text-3xl font-bold font-heading text-[#1E90FF]">Zephyr // Decentralized Governance DAO</h3>
+              <a
+                href="https://github.com/notokay00/zephyr-dao"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-mono uppercase px-2.5 py-1 border border-foreground hover:bg-foreground hover:text-background transition-colors"
+              >
+                [GITHUB ↗]
+              </a>
+            </div>
+            
+            <div className="space-y-6 text-sm md:text-base text-muted-foreground leading-relaxed">
+              <div>
+                <strong className="text-foreground block mb-2">Problem</strong>
+                <p>Traditional organizational voting mechanisms lack transparency, auditability, and are vulnerable to centralized manipulation.</p>
+              </div>
+              
+              <div>
+                <strong className="text-foreground block mb-2">Solution</strong>
+                <p>Developed a decentralized governance platform on the Ethereum Sepolia testnet utilizing immutable smart contracts and reputation-weighted voting.</p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-foreground/10">
+                <div>
+                  <strong className="text-foreground block mb-2">Architecture</strong>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Web3 &amp; Blockchain</li>
+                    <li>Sepolia Testnet</li>
+                    <li>Reputation Systems</li>
+                  </ul>
+                </div>
+                <div>
+                  <strong className="text-foreground block mb-2">Software</strong>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>ethers.js</li>
+                    <li>Solidity</li>
+                    <li>Next.js &amp; React</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="pt-6 border-t border-foreground/10">
+                <strong className="text-foreground block mb-2">Outcome</strong>
+                <p>Successfully deployed governance smart contracts, enabling secure, transparent, and auditable voting workflows for distributed teams.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Project 7: Solar Cold Storage */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start pt-16 border-t border-foreground/10">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:order-1 order-2 mt-8 md:mt-0">
             <div className="aspect-video sm:aspect-square bg-secondary border border-foreground/20 flex items-center justify-center text-xs text-muted-foreground font-mono">[IMAGE: ICE BANK ARCH]</div>
@@ -399,8 +477,44 @@ export default function ProjectShowcase() {
             <li className="flex gap-3"><span>&gt;</span> Autonomous flight control &amp; UAV telemetry systems</li>
           </ul>
         </div>
+
+        {/* Tools */}
+        <div className="space-y-8">
+          <h2 className="text-xs font-mono uppercase tracking-[0.2em] text-[#1E90FF]">
+            Operational Stack
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 text-sm md:text-base text-muted-foreground">
+            <div>
+              <strong className="text-foreground font-mono text-xs uppercase block mb-4 border-b border-foreground/10 pb-2">Hardware &amp; Power</strong>
+              <ul className="space-y-2">
+                <li>STM32, ESP32 &amp; Pixhawk</li>
+                <li>MOSFET / IGBT Converters</li>
+                <li>Photorelays &amp; I2C Telemetry</li>
+              </ul>
+            </div>
+            <div>
+              <strong className="text-foreground font-mono text-xs uppercase block mb-4 border-b border-foreground/10 pb-2">Programming</strong>
+              <ul className="space-y-2">
+                <li>C/C++ &amp; Embedded C</li>
+                <li>Python &amp; TypeScript</li>
+                <li>Next.js, React &amp; Supabase</li>
+              </ul>
+            </div>
+            <div className="col-span-1 sm:col-span-2">
+              <strong className="text-foreground font-mono text-xs uppercase block mb-4 border-b border-foreground/10 pb-2">EDA &amp; Simulation Tools</strong>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <li>KiCad, EasyEDA &amp; TINA-TI</li>
+                <li>MATLAB &amp; Simulink</li>
+                <li>Geant4 &amp; CASINO</li>
+                <li>Ubuntu Linux &amp; Git</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* 5. PRESENTATIONS & PUBLICATIONS */}
-      <div className="pt-20 border-t border-foreground/20">
+      <div className="pt-20 border-t border-foreground/20 mt-16">
         <h2 className="text-xs font-mono uppercase tracking-[0.2em] text-[#1E90FF] mb-8">
           Academic Discourse // Presentations
         </h2>
@@ -438,42 +552,6 @@ export default function ProjectShowcase() {
             </p>
           </div>
         </div>
-      </div>
-
-        {/* Tools */}
-        <div className="space-y-8">
-          <h2 className="text-xs font-mono uppercase tracking-[0.2em] text-[#1E90FF]">
-            Operational Stack
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 text-sm md:text-base text-muted-foreground">
-            <div>
-              <strong className="text-foreground font-mono text-xs uppercase block mb-4 border-b border-foreground/10 pb-2">Hardware &amp; Power</strong>
-              <ul className="space-y-2">
-                <li>STM32, ESP32 &amp; Pixhawk</li>
-                <li>MOSFET / IGBT Converters</li>
-                <li>Photorelays &amp; I2C Telemetry</li>
-              </ul>
-            </div>
-            <div>
-              <strong className="text-foreground font-mono text-xs uppercase block mb-4 border-b border-foreground/10 pb-2">Programming</strong>
-              <ul className="space-y-2">
-                <li>C/C++ &amp; Embedded C</li>
-                <li>Python &amp; TypeScript</li>
-                <li>Next.js, React &amp; Supabase</li>
-              </ul>
-            </div>
-            <div className="col-span-1 sm:col-span-2">
-              <strong className="text-foreground font-mono text-xs uppercase block mb-4 border-b border-foreground/10 pb-2">EDA &amp; Simulation Tools</strong>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <li>KiCad, EasyEDA &amp; TINA-TI</li>
-                <li>MATLAB &amp; Simulink</li>
-                <li>Geant4 &amp; CASINO</li>
-                <li>Ubuntu Linux &amp; Git</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
   );
