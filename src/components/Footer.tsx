@@ -59,7 +59,7 @@ const Footer = () => {
           <p className="text-xs font-mono uppercase tracking-[0.2em] text-foreground/70">
             Profiles &amp; Socials
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             <a
               href="https://github.com/notokay00"
               target="_blank"
@@ -97,6 +97,16 @@ const Footer = () => {
               className="border border-foreground/25 bg-background px-5 py-4 flex items-center justify-between font-mono text-sm font-semibold text-foreground hover:bg-foreground hover:text-background transition-colors"
             >
               <span>Instagram</span>
+              <span>↗</span>
+            </a>
+
+            <a
+              href="https://boxd.it/laxYj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-foreground/25 bg-background px-5 py-4 flex items-center justify-between font-mono text-sm font-semibold text-foreground hover:bg-foreground hover:text-background transition-colors"
+            >
+              <span>Letterboxd</span>
               <span>↗</span>
             </a>
           </div>
