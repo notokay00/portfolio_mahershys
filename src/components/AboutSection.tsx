@@ -54,7 +54,7 @@ const AboutSection = () => {
         <div className="md:col-span-4 flex justify-center md:justify-end">
           <div className="relative w-full max-w-[300px] aspect-[3/4] border border-foreground/25 bg-secondary overflow-hidden shadow-md">
             <img
-              src="/profile.jpg"
+              src="/profile.jpeg"
               alt="Maharshi Dave"
               className="w-full h-full object-cover object-center"
             />
