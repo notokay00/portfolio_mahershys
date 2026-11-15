@@ -1,79 +1,50 @@
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
-
-const navLinks = [
-  { label: "INDEX", href: "#home" },
-  { label: "RESEARCH", href: "#projects" },
-  { label: "SYSTEMS", href: "#experience" },
-  { label: "CONTACT", href: "#contact" },
-];
+import React from "react";
 
 const Navbar = () => {
-  const [mobileOpen, setMobileOpen] = useState(false);
-
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-foreground">
-      <div className="max-w-7xl mx-auto flex items-center justify-between h-14 px-6">
-        <a
-          href="#home"
-          className="text-xs font-mono uppercase tracking-[0.2em] text-foreground"
-        >
-          M. Dave // Aerospace & Electrical
+    <nav className="border-b border-foreground/20 bg-background text-foreground sticky top-0 z-40">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between font-mono text-xs uppercase tracking-widest">
+        {/* Logo / Name */}
+        <a href="#" className="font-bold hover:text-[#1E90FF] transition-colors">
+          M. DAVE // AEROSPACE & ELECTRICAL
         </a>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-xs font-mono uppercase tracking-[0.15em] text-muted-foreground hover:text-primary transition-colors duration-200"
-            >
-              [{link.label}]
-            </a>
-          ))}
+        {/* Desktop Links */}
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
+          <a href="#about" className="hover:text-[#1E90FF] transition-colors">
+            [ABOUT]
+          </a>
+          <a href="#projects" className="hover:text-[#1E90FF] transition-colors">
+            [PROJECTS]
+          </a>
+          <a href="#experience" className="hover:text-[#1E90FF] transition-colors">
+            [LEADERSHIP]
+          </a>
+          <a href="#contact" className="hover:text-[#1E90FF] transition-colors">
+            [CONTACT]
+          </a>
           <a
             href="/Maharshi_Dave_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-mono uppercase tracking-[0.15em] text-primary hover:underline underline-offset-4 transition-all duration-200"
+            className="text-primary hover:bg-primary hover:text-background border border-primary/30 px-3 py-1 transition-colors ml-2"
           >
             [RESUME ↓]
           </a>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-foreground"
-        >
-          {mobileOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        {/* Mobile Menu (Hidden on desktop) */}
+        <div className="md:hidden flex items-center">
+          <a
+            href="/Maharshi_Dave_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary border border-primary/30 px-3 py-1 transition-colors"
+          >
+            [RESUME ↓]
+          </a>
+        </div>
       </div>
-
-      {/* Mobile Menu Dropdown */}
-      {mobileOpen && (
-        <div className="md:hidden bg-background border-b border-foreground px-6 pb-6 pt-2 space-y-3">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileOpen(false)}
-              className="block text-xs font-mono uppercase tracking-[0.15em] text-muted-foreground hover:text-primary transition-colors"
-            >
-              [{link.label}]
-            </a>
-          ))}
-          <a
-            href="/Maharshi_Dave_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block text-xs font-mono uppercase tracking-[0.15em] text-primary"
-          >
-            [RESUME ↓]
-          </a>
-        </div>
-      )}
     </nav>
   );
 };
