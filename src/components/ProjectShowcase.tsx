@@ -789,69 +789,154 @@ export default function ProjectShowcase() {
       </div>
 
       {/* 3 & 4. LEARNING AND TOOLS MATRIX */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 pt-20 border-t border-foreground/20">
-        {/* Learning */}
-        <div className="space-y-8">
-          <h2 className="text-xs font-mono uppercase tracking-[0.2em] text-[#1E90FF] flex items-center gap-3">
-            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-            Active Research Directory
+      <div className="pt-20 border-t border-foreground/25 space-y-10">
+        <div>
+          <p className="text-xs font-mono uppercase tracking-[0.2em] text-foreground/70 mb-2">
+            Capabilities &amp; Focus
+          </p>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold tracking-tight">
+            Research Direction &amp; Technical Stack
           </h2>
-          <ul className="space-y-4 text-sm md:text-base text-muted-foreground font-mono">
-            <li className="flex gap-3">
-              <span>&gt;</span> Space-grade power electronics &amp;
-              radiation-hardened topologies
-            </li>
-            <li className="flex gap-3">
-              <span>&gt;</span> Plasma diagnostics (Langmuir probes) &amp;
-              Townsend breakdown
-            </li>
-            <li className="flex gap-3">
-              <span>&gt;</span> Sub-volt energy harvesting &amp; solid-state
-              power distribution
-            </li>
-            <li className="flex gap-3">
-              <span>&gt;</span> Autonomous flight control &amp; UAV telemetry
-              systems
-            </li>
-          </ul>
         </div>
 
-        {/* Tools */}
-        <div className="space-y-8">
-          <h2 className="text-xs font-mono uppercase tracking-[0.2em] text-[#1E90FF]">
-            Operational Stack
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 text-sm md:text-base text-muted-foreground">
-            <div>
-              <strong className="text-foreground font-mono text-xs uppercase block mb-4 border-b border-foreground/10 pb-2">
-                Hardware &amp; Power
-              </strong>
-              <ul className="space-y-2">
-                <li>STM32, ESP32 &amp; Pixhawk</li>
-                <li>MOSFET / IGBT Converters</li>
-                <li>Photorelays &amp; I2C Telemetry</li>
-              </ul>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Active Research Directory Card */}
+          <div className="border border-foreground/20 bg-secondary/40 p-6 md:p-8 space-y-6">
+            <div className="flex items-center justify-between border-b border-foreground/15 pb-4">
+              <h3 className="text-sm font-mono uppercase tracking-[0.18em] font-bold flex items-center gap-3">
+                <span className="w-2.5 h-2.5 rounded-full bg-green-600 animate-pulse"></span>
+                Active Research Directory
+              </h3>
+              <span className="text-[11px] font-mono text-foreground/70">
+                [ONGOING]
+              </span>
             </div>
-            <div>
-              <strong className="text-foreground font-mono text-xs uppercase block mb-4 border-b border-foreground/10 pb-2">
-                Programming
-              </strong>
-              <ul className="space-y-2">
-                <li>C/C++ &amp; Embedded C</li>
-                <li>Python &amp; TypeScript</li>
-                <li>Next.js, React &amp; Supabase</li>
-              </ul>
+
+            <div className="space-y-4">
+              {[
+                {
+                  id: "01",
+                  title: "Space-Grade Power Electronics",
+                  desc: "Radiation-hardened topologies, high-efficiency converters, and satellite power buses.",
+                },
+                {
+                  id: "02",
+                  title: "Plasma Diagnostics & Breakdown",
+                  desc: "Langmuir probe characterization and Townsend discharge physics for propulsion.",
+                },
+                {
+                  id: "03",
+                  title: "Sub-Volt Energy Harvesting",
+                  desc: "Ultra-low-voltage boost architectures and solid-state power distribution.",
+                },
+                {
+                  id: "04",
+                  title: "Autonomous Flight & Telemetry",
+                  desc: "UAV state-machine fail-safes, sensor fusion, and resilient comms.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.id}
+                  className="bg-background border border-foreground/15 p-4 flex items-start gap-4"
+                >
+                  <span className="text-xs font-mono font-bold text-[#1E90FF] pt-0.5">
+                    {item.id}
+                  </span>
+                  <div className="space-y-1">
+                    <p className="text-sm md:text-base font-bold text-foreground font-mono">
+                      {item.title}
+                    </p>
+                    <p className="text-xs md:text-sm text-foreground/80 leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="col-span-1 sm:col-span-2">
-              <strong className="text-foreground font-mono text-xs uppercase block mb-4 border-b border-foreground/10 pb-2">
-                EDA &amp; Simulation Tools
-              </strong>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <li>KiCad, EasyEDA &amp; TINA-TI</li>
-                <li>MATLAB &amp; Simulink</li>
-                <li>Geant4 &amp; CASINO</li>
-                <li>Ubuntu Linux &amp; Git</li>
-              </ul>
+          </div>
+
+          {/* Operational Stack Card */}
+          <div className="border border-foreground/20 bg-secondary/40 p-6 md:p-8 space-y-6">
+            <div className="flex items-center justify-between border-b border-foreground/15 pb-4">
+              <h3 className="text-sm font-mono uppercase tracking-[0.18em] font-bold">
+                Operational Stack
+              </h3>
+              <span className="text-[11px] font-mono text-foreground/70">
+                [TOOLS &amp; HARDWARE]
+              </span>
+            </div>
+
+            <div className="space-y-6">
+              <div>
+                <p className="text-xs font-mono uppercase tracking-wider font-bold text-foreground mb-3">
+                  Hardware &amp; Power
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "STM32",
+                    "ESP32",
+                    "Pixhawk",
+                    "MOSFET / IGBT Converters",
+                    "Photorelays",
+                    "I2C Telemetry",
+                  ].map((tool) => (
+                    <span
+                      key={tool}
+                      className="text-xs md:text-sm font-mono text-foreground bg-background border border-foreground/25 px-3 py-1.5"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-4 border-t border-foreground/15">
+                <p className="text-xs font-mono uppercase tracking-wider font-bold text-foreground mb-3">
+                  Programming
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "C / C++",
+                    "Embedded C",
+                    "Python",
+                    "TypeScript",
+                    "Next.js & React",
+                    "Supabase",
+                  ].map((tool) => (
+                    <span
+                      key={tool}
+                      className="text-xs md:text-sm font-mono text-foreground bg-background border border-foreground/25 px-3 py-1.5"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-4 border-t border-foreground/15">
+                <p className="text-xs font-mono uppercase tracking-wider font-bold text-foreground mb-3">
+                  EDA &amp; Simulation Tools
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "KiCad",
+                    "EasyEDA",
+                    "TINA-TI",
+                    "MATLAB & Simulink",
+                    "Geant4",
+                    "CASINO",
+                    "ROS 2 & Gazebo",
+                    "Ubuntu Linux & Git",
+                  ].map((tool) => (
+                    <span
+                      key={tool}
+                      className="text-xs md:text-sm font-mono text-foreground bg-background border border-foreground/25 px-3 py-1.5"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
